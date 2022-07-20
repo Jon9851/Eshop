@@ -1,0 +1,90 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "Pc packages",
+        "friendly_name": "Pc Packages"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "Laptops",
+        "friendly_name": "Laptops"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "clearance",
+        "friendly_name": "Clearance"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "deals",
+        "friendly_name": "Deals"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "Mouse",
+        "friendly_name": "Mouse"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "Keyboards",
+        "friendly_name": "Keyboards"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "Cables",
+        "friendly_name": "Cables"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "new_arrivals",
+        "friendly_name": "New Arrivals"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+        "name": "Graphic Cards",
+        "friendly_name": "Graphic Cards"
+      }
+    }
+    {
+      "pk": 10,
+      "model": "products.category",
+      "fields": {
+        "name": "Gaming Laptops",
+        "friendly_name": "Gaming Laptops"
+      }
+    }
+    {
+      "pk": 11,
+      "model": "products.category",
+      "fields": {
+        "name": "Gaming PC",
+        "friendly_name": "Gaming PC"
+      }
+    }
+  ]

@@ -1,0 +1,230 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+          "sku": "500001",
+          "name": "Acer Aspire c24",
+          "description": "Get all the benefits of a big screen without the bulk of a traditional desktop PC with the Acer Aspire C24-1650 23.8 inch All-in-One PC. This great computer manages to pack all its parts into a slim frame that saves space on your desk.
+          Store all your photos and videos and get quick access to all your files thanks to the 1 TB SSD. Applications and software will load up quickly - no more staring at a loading bar for minutes on end. And the 11th gen Intel® Core™ i5 processor gives you loads of power for finishing off a work project or helping the kids with their homework.
+          Intel® Core™ i7-1165G7 Processor
+          RAM: 8 GB / Storage: 1 TB HDD & 512 GB SSD
+          Graphics: NVIDIA GeForce MX450 2 GB
+          Full HD touchscreen",
+          "price": 739.99,
+          "category": 1,
+          "rating": 4.5,
+          "image_url": "https://www.dropbox.com/s/ldothz4vknr36ko/acerc24.png?dl=0",
+          "image": "acerc24.png"
+        }
+    },
+
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+          "sku": "500002",
+          "name": "Acer Aspire c27",
+          "description": "Get all the benefits of a big screen without the bulk of a traditional desktop PC with the Acer Aspire C27-1655 27inch All-in-One PC. This great computer manages to pack all its parts into a slim frame that saves space on your desk.
+           Don't let its slim appearance fool you - there's plenty of room for your photos, music and work documents thanks to 1 TB SSD of storage space. And the 11th gen Intel® Core™ i3 processor provides enough power for daily tasks.
+           Intel® Core™ i3-1115G4 Processor
+           RAM: 8 GB / Storage: 1 TB SSD
+           Graphics: NVIDIA GeForce MX330 2 GB
+           Full HD display",
+          "price": 579.99,
+          "category": 1,
+          "rating": 4.5,
+          "image_url": "https://www.dropbox.com/s/ybml7t9hnzhh26t/accerc271655.png?dl=0",
+          "image": "accerc271655.png"
+        }
+    },
+    
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+          "sku": "500003",
+          "name": "Dell Insprion Aio 7770",
+          "description": "Stay productive with a PC that can handle any task. The Dell Inspiron AIO 7700 27inch All-in-One PC features a 11th gen Intel® Core™ i7 processor, with the power to handle several intensive programs at once.
+          So, whether you're rendering a video and streaming on YouTube for inspiration, or completing a project and researching at the same time, you can expect a consistently smooth performance.
+          Your enertainment sorted. The big and bright InfinityEdge display is perfect for watching movies. With CinemaColor, you'll get vibrant colour and a crisp, sharp image to do your films justice. And when you want to listen to music, Waves Maxx Audio Pro ensures the Dell Inspiron AIO sounds as good as it looks.
+          Intel® Core™ i7-1165G7 Processor
+          RAM: 8 GB / Storage: 1 TB HDD & 512 GB SSD
+          Full HD display
+          Intel 11/12th Gen i7",
+          "price": 1000.99,
+          "category": 1,
+          "rating": 4.5,
+          "image_url": "https://www.dropbox.com/s/2nic85a2ykpjbtc/dellinsprionaio.png?dl=0",
+          "image": "dellinsprionaio.png"
+        }
+    },
+
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+          "sku": "500004",
+          "name": "HP 22 21.5 All-in-One",
+          "description": "The three-sided micro-edge display lets you enjoy more of the Full HD resolution
+            The Intel® Core™ i3 processor means you can easily handle your day-to-day tasks without any unnecessary lag
+            256 GB of SSD storage offers fast loading speeds and more than enough space for the apps and photos you love
+            With 8 GB of RAM you can run multiple apps at the same time, including many browser tabs
+            HP True Vision 5 MP camera is perfect for keeping in touch with your family and friends
+            With a mouse and a keyboard included with the PC and pre-installed Windows 11, you don't need anything else to get started",
+          "price": 400.00,
+          "category": 1,
+          "rating": 3.5,
+          "image_url": "https://www.dropbox.com/s/bimlj6v8urcqi80/hp22.png?dl=0",
+          "image": "hp22.png"
+        }
+    },
+
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+          "sku": "500005",
+          "name": "HP Pavilion 27 All-in-One",
+          "description": "The HP Pavilion 27-d1005na 27, All-in-One PC boasts a super-fast 11th gen Intel® Core™ i5 processor with 8 GB RAM, so you can multitask to the max without annoying lag or freezing
+          Full HD micro-edge display. See all the details in your photos and videos, the Pavilion 27-d1005na has a stunning Full HD display with anti-glare panel.
+          The micro-edge display means that you won't be distracted by borders when you're focusing on work or entertainment. Plus, the webcam pops up from the screen, keeping out of the way when not in use for effortless security.
+          Intel® Core™ i5-11500T Processor
+          RAM: 8 GB / Storage: 1 TB SSD
+          Full HD display",
+          "price": 900.00,
+          "category": 1,
+          "rating": 4.5,
+          "image_url": "https://www.dropbox.com/s/hwahifwcnkif12v/hpc27bc.png?dl=0",
+          "image": "hpc27bc.png"
+        }
+    },
+
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+          "sku": "500006",
+          "name": "HP 24 23.8inch All-in-One",
+          "description": "The micro-edge display lets you enjoy more of the Full HD resolution. The AMD Ryzen 5 processor is perfect for work, browsing and entertainment - you can edit spreadsheets, crop photos and enjoy watching your favourite shows.
+            512 GB of SSD storage offers fast loading speeds and more than enough space for the apps and photos you love
+            With 8 GB of RAM you can run multiple apps at the same time, including many browser tabs
+            HP True Vision 5 MP camera is perfect for keeping in touch with your family and friends
+            With a mouse and a keyboard included with the PC and pre-installed Windows 11, you don't need anything else to get started",
+          "price": 550.00,
+          "category": 1,
+          "rating": 4,
+          "image_url": "https://www.dropbox.com/s/nftdnxtr53ef1t3/hppavilion24k.png?dl=0",
+          "image": "hppavilion24k.png"
+        }
+    },
+    
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+          "sku": "500006",
+          "name": "HP 24 23.8inch All-in-One",
+          "description": "The micro-edge display lets you enjoy more of the Full HD resolution. The AMD Ryzen 5 processor is perfect for work, browsing and entertainment - you can edit spreadsheets, crop photos and enjoy watching your favourite shows.
+            512 GB of SSD storage offers fast loading speeds and more than enough space for the apps and photos you love
+            With 8 GB of RAM you can run multiple apps at the same time, including many browser tabs
+            HP True Vision 5 MP camera is perfect for keeping in touch with your family and friends
+            With a mouse and a keyboard included with the PC and pre-installed Windows 11, you don't need anything else to get started",
+          "price": 550.00,
+          "category": 1,
+          "rating": 4,
+          "image_url": "https://www.dropbox.com/s/nftdnxtr53ef1t3/hppavilion24k.png?dl=0",
+          "image": "hppavilion24k.png"
+        }
+    },
+
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+          "sku": "500007",
+          "name": "Lenovo 23.8inch All-in-One 512gb SSD black",
+          "description": "All-in-one saves space, looks greatWant a desktop computer that doesn't take up loads of space? The Lenovo IdeaCentre AIO 3 27inch  All-in-One PC is here for you. By cramming all the technical bits of a traditional tower computer into a single monitor, you get all the specs and power you need with half the hardware.
+          Powerful performance. Accomplish anything with the IdeaCentre AIO 3 27inch All-in-One PC. The octa-core AMD Ryzen 7 processor with Radeon graphics delivers the power you need to get your work done. Whether that's editing photos, streaming Netflix or putting the final touches on that work project you've been putting off.
+          AMD Ryzen 7 5700U Processor
+          RAM: 8 GB / Storage: 512 GB SSD
+          Full HD display",
+          "price": 569.99,
+          "category": 1,
+          "rating": 5,
+          "image_url": "https://www.dropbox.com/s/ztt89knz5cnexu9/lenovoidea.png?dl=0",
+          "image": "lenovoidea.png"
+        }
+    },
+    
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+          "sku": "500008",
+          "name": "Lenovo 27inch All-in-One 512gb SSD black",
+          "description": "All-in-one saves space, looks greatWant a desktop computer that doesn't take up loads of space? The Lenovo IdeaCentre AIO 3 27inch  All-in-One PC is here for you. By cramming all the technical bits of a traditional tower computer into a single monitor, you get all the specs and power you need with half the hardware.
+          Powerful performance. Accomplish anything with the IdeaCentre AIO 3 27inch All-in-One PC. The octa-core AMD Ryzen 7 processor with Radeon graphics delivers the power you need to get your work done. Whether that's editing photos, streaming Netflix or putting the final touches on that work project you've been putting off.
+          AMD Ryzen 7 5700U Processor
+          RAM: 8 GB / Storage: 512 GB SSD
+          Full HD display",
+          "price": 629.99,
+          "category": 1,
+          "rating": 3,
+          "image_url": "https://www.dropbox.com/s/ztt89knz5cnexu9/lenovoidea.png?dl=0",
+          "image": "lenovoidea.png"
+        }
+    },
+    
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+          "sku": "500009",
+          "name": "ASUS ZEn 23.8inch All-in-One",
+          "description": "The ASUS Zen AiO M5401 All-in-One PC has a NanoEdge display with a thin frame around the screen, which creates an edge-to-edge screen experience. You can enjoy all your online shows in Full HD with true-to-life colours. Plus, the speakers deliver powerful and rich bass sound you wouldn't expect from a compact PC.
+          The single piece aluminum stand completes the design. Tilt it effortlessly to any position that's comfortable for you.
+          Take on daily tasks. Whether you're working on a project, binge-watching a boxset or browsing social media, the ASUS Zen AiO M5401 lets you do it all. Featuring a 5000 series AMD Ryzen 3 processor, it can easily handle your day-to-day tasks.
+          For fast storage there's a swift 512 GB SSD. Expect almost instant starting times and quick loading times. And it has plenty of space for all your software, photos and videos.
+          AMD Ryzen 3 5300U Processor
+          RAM: 8 GB / Storage: 512 GB SSD
+          Full HD display",
+          "price": 500.00,
+          "category": 1,
+          "rating": 4,
+          "image_url": "https://www.dropbox.com/s/v3xgri4jjppwjah/asuszen.png?dl=0",
+          "image": "asuszen.png"
+        }
+    },
+
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+          "sku": "500010",
+          "name": "Hp Chromebase 21.5inch All-in-one",
+          "description": "
+            Full HD touchscreen display brings amazing detail to your entertainment
+            Audio by Bang & Olufsen provides rich sound to make your movies and shows more immersive
+            The 90 degree rotating screen lets you switch between online learning and streaming in no-time
+            The three-sided micro-edge display lets you enjoy more of the screen
+            Intel® Pentium® Gold means you can easily handle your day-to-day tasks without any unnecesary lag
+            Chrome OS lets you use your favourite Android apps
+            256 GB of SSD storage offers fast loading speeds and more than enough space for the apps and photos you lov
+            WiFi 6 makes for stable and swift internet connectivity
+            HP True Vision 5 MP camera is perfect for keeping in touch with your family and friend
+            Premium Chromebook
+            Intel® Core™ i3-10110U Processor
+            RAM: 8 GB / Storage: 256 GB SSD
+            Full HD touchscreen",
+          "price": 569.99,
+          "category": 1,
+          "rating": 3.5,
+          "image_url": "https://www.dropbox.com/s/2dsdb228rstjfr4/hpchrome.png?dl=0",
+          "image": "hpchrome.png"
+        }
+    },
+    
+    
+    
+]
