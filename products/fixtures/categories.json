@@ -3,8 +3,8 @@
       "pk": 1,
       "model": "products.category",
       "fields": {
-        "name": "Pc packages",
-        "friendly_name": "Pc Packages"
+        "name": "Desktop PC",
+        "friendly_name": " Desktop PC "
       }
     },
     {
@@ -70,7 +70,7 @@
         "name": "Graphic Cards",
         "friendly_name": "Graphic Cards"
       }
-    }
+    },
     {
       "pk": 10,
       "model": "products.category",
@@ -78,7 +78,7 @@
         "name": "Gaming Laptops",
         "friendly_name": "Gaming Laptops"
       }
-    }
+    },
     {
       "pk": 11,
       "model": "products.category",
