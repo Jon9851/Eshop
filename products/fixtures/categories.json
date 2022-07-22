@@ -51,8 +51,8 @@
       "pk": 7,
       "model": "products.category",
       "fields": {
-        "name": "Cables",
-        "friendly_name": "Cables"
+        "name": "Monitors",
+        "friendly_name": "Monitors"
       }
     },
     {
