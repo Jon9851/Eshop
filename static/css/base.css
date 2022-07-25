@@ -28,13 +28,13 @@ body{
 }
 
 .shop-now-button {
-    background: black;
+    background: #37168A;
     color: white;
     width: 160px;
 }
 
 .btn-black {
-    background: black;
+    background: #37168A;
     color: white;
 }
 
@@ -44,31 +44,33 @@ body{
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: white;
+    color: #37168A;
 }
 
 .text-black {
-    color: #000 !important;
+    color: black !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 3px solid #37168A !important;
 }
 
 .bg-black{
-    background: #000 !important;
+    background: #37168A !important;
 }
 
-.overlay{
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0%;
-    position: fixed;
-    background: white;
-    z-index: -1;
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
+
+.card h-100 border-7 shadow
 
 /* -------------------------------- Media Queries */
 
