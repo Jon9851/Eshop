@@ -1,6 +1,7 @@
 <ul>
+    <!--search icon  on mobile  nav page  -->
     <li class="list-inline-item">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
           <div class="text-center">
               <div><i class="fas fa-search fa-lg"></i></div>
               <p class="my-0">Search</p>
@@ -21,8 +22,9 @@
           </form>
       </div>
   </li>
+  <!-- accounts icon code  -->
   <li class="list-inline-item dropdown">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #37168A;"> 
           <div class="text-center">
               <div><i class="fas fa-user fa-lg"></i></div>
               <p class="my-0">My Account</p>
@@ -41,11 +43,12 @@
           {% endif %}
       </div>
   </li>
+  <!-- shopping bag icon code  -->
   <li class="list-inline-item">
       <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="">
           <div class="text-center">
-              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-              <p class="my-0">
+              <div><i class="fas fa-shopping-bag fa-lg" style="color: #37168A;"></i></div>
+              <p class="my-0" style="color: #37168A;">
                   {% if grand_total %}
                       ${{ grand_total|floatformat:2 }}
                   {% else %}
