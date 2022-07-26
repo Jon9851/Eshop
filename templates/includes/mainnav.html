@@ -18,10 +18,10 @@
                 Desktops/Laptops
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="desktop/laptops-link"> 
-                <a href="" class="dropdown-item" style="color: #37168A;"> Desktop Pc </a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Laptops</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Gaming Laptops</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Gaming PC</a>
+                <a href="{% url 'products' %}?category=desktop_pc" class="dropdown-item" style="color: #37168A;"> Desktop Pc </a>
+                <a href="{% url 'products' %}?category=laptops" class="dropdown-item" style="color: #37168A;">Laptops</a>
+                <a href="{% url 'products' %}?category=gaming_laptops" class="dropdown-item" style="color: #37168A;">Gaming Laptops</a>
+                <a href="{% url 'products' %}?category=gaming_pc" class="dropdown-item" style="color: #37168A;">Gaming PC</a>
             </div>
         </li>
         <li class="nav-item dropdown">
