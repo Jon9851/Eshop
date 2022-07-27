@@ -1,8 +1,8 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-itmes dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-9" href="#" id="all-products-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
+            <a class="logo-font font-weight-bold nav-link mr-9" href="#" id="all-products-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
                 All Products
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
@@ -12,45 +12,51 @@
                 <a href="{% url 'products' %}" class="dropdown-item" style="color: #37168A;">All Products</a>
             </div>
         </li>
+        <!-- desktop and laptops code for the nav bar -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="desktops-link"
+            <a class="logo-font font-weight-bold nav-link" href="#" id="desktops-laptops-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
                 Desktops/Laptops
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="desktop/laptops-link"> 
-                <a href="{% url 'products' %}?category=desktop_pc" class="dropdown-item" style="color: #37168A;">Desktop Pc</a>
-                <a href="{% url 'products' %}?category=laptops" class="dropdown-item" style="color: #37168A;">Laptops</a>
-                <a href="{% url 'products' %}?category=gaming_laptops" class="dropdown-item" style="color: #37168A;">Gaming Laptops</a>
-                <a href="{% url 'products' %}?category=gaming_pc" class="dropdown-item" style="color: #37168A;">Gaming PC</a>
+
+            <div class="dropdown-menu border-0" aria-labelledby="desktop-laptops-link">
+                <a href="{% url 'products' %}?category=desktop_pc" class="dropdown-item" style="color: #37168A;">Desktop
+                    Pc</a>
+                <a href="{% url 'products' %}?category=laptops" class="dropdown-item"
+                    style="color: #37168A;">Laptops</a>
+                <a href="{% url 'products' %}?category=gaming_laptops" class="dropdown-item"
+                    style="color: #37168A;">Gaming Laptops</a>
+                <a href="{% url 'products' %}?category=gaming_pc" class="dropdown-item" style="color: #37168A;">Gaming
+                    PC</a>
             </div>
         </li>
+        <!-- accessories code for the nav bar  -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="accessories-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="accessories-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
                 Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item" style="color: #37168A;">Mouse</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Keyboards</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Cables</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Graphic Cards</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Monitors</a>
+            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+                <a href="{% url 'products' %}?category=mouse" class="dropdown-item" style="color: #37168A;">Mouses</a>
+                <a href="{% url 'products' %}?category=keyboards" class="dropdown-item"
+                    style="color: #37168A;">Keyboards</a>
+                <a href="{% url 'products' %}?category=graphic_cards" class="dropdown-item"
+                    style="color: #37168A;">Graphic Cards</a>
+                <a href="{% url 'products' %}?category=monitors" class="dropdown-item"
+                    style="color: #37168A;">Monitors</a>
             </div>
         </li>
-        <!-- special offers code  -->
+        <!-- special offers code  for the nav bar -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link" href="#" id="specials-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item" style="color: #37168A;">New Arrivals</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Deals</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">Clearance</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item" style="color: #37168A;">New
+                    Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item" style="color: #37168A;">Deals</a>
             </div>
         </li>
     </ul>
-</div>
-</ul>
 </div>
