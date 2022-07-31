@@ -70,7 +70,10 @@ body{
 	z-index: -1;
 }
 
-.card h-100 border-7 shadow
+a.category-badge > span.badge:hover{
+    background-color: #37168A !important;
+    color: white !important;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -106,3 +109,4 @@ body{
         height: calc(100vh - 116px);
     }
 }
+

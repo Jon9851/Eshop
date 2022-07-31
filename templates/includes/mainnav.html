@@ -6,9 +6,9 @@
                 All Products
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item" style="color: #37168A;">By Price</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">By Rating</a>
-                <a href="" class="dropdown-item" style="color: #37168A;">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" style="color: #37168A;">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item" style="color: #37168A;">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item" style="color: #37168A;">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item" style="color: #37168A;">All Products</a>
             </div>
         </li>
@@ -38,6 +38,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
                 <a href="{% url 'products' %}?category=mouse" class="dropdown-item" style="color: #37168A;">Mouses</a>
+                #
                 <a href="{% url 'products' %}?category=keyboards" class="dropdown-item"
                     style="color: #37168A;">Keyboards</a>
                 <a href="{% url 'products' %}?category=graphic_cards" class="dropdown-item"
