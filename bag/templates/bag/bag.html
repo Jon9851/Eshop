@@ -19,7 +19,6 @@
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             {% if bag_items %}
@@ -34,7 +33,6 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
@@ -51,7 +49,7 @@
                             <p class="my-0">{{ item.quantity }}</p>
                         </td>
                         <td class="py-3" style="color: #37168A;">
-                            <form class="form update-form" method="POST" action="">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -74,6 +72,8 @@
                                                 </span>
                                             </button>
                                         </div>
+                                    </div>
+                                </div>
                             </form>
                             <a class="update-link text-info"><small>Update</small></a>
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
@@ -91,7 +91,7 @@
                             <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                                You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
                                 more!
                             </p>
                             {% endif %}
