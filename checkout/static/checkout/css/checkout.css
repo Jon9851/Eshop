@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #37168A;
 }
 
 .fieldset-label {
@@ -32,8 +32,25 @@
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: #37168A;
+    border: 1px solid #37168A;
+}
+.ElementsApp, .ElementsApp .InputElement {
+  color: #37168A;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+select,
+select option {
+    color: #37168A;
+}
+
+select:invalid,
+select option[value=""] {
+    color: red !important;
 }
 
 #payment-form .form-control,
@@ -58,4 +75,12 @@
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+/* delivery information  */
+.text-muted {
+  color: #37168A !important;
+}
+
+.text-black {
+  color: #37168A !important;
 }
