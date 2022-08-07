@@ -247,6 +247,33 @@ a.category-badge > span.badge:hover{
       body {
           height: calc(100vh - 116px);
       }
-  }
+      .h4, h4 {
+        font-size: 1rem;
+    }
+    .display-4 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-top: 150%;
+    }
+    .display-4.logo-font.text-black {
+        font-size: 0.5rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+}
+  
+
 
   
