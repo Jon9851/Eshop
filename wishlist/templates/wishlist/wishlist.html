@@ -36,10 +36,10 @@
     <div class="row mb-4">
         {% for item in items %}
         <div class="col col-sm-6 col-md-4 col-lg-3 mt-1 mb-1">
-            <div class="card h-100 border-1 shadow">
+            <div class="card h-100 border-1 shadow" style="border: 5px solid #37168A">
                 <a href="{% url 'product_detail' item.product.id %}">
                     {% if item.product.image %}
-                    <img src="{{ item.product.image.url }}" class="card-img-top" alt="product.name">
+                    <img src="{{ item.product.image.url }}" class="card-img-top" alt="product.name" >
                     {% else %}
                     <img src="{{ MEDIA_URL }}no-image.jpg" class="card-img-top" alt="product.name">
                     {% endif %}

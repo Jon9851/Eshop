@@ -273,7 +273,12 @@ a.category-badge > span.badge:hover{
         font-size: 1rem;
     }
 }
-  
+/* all muted text headers */
+.text-muted {
+    color: #37168A !important;
+}
 
-
+.btn {
+    border: 1px solid #37168A;
   
+}

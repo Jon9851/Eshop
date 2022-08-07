@@ -98,6 +98,12 @@
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
                                     {% if not request.user.is_anonymous %}
                                     {% if product in wishlist %}
                                     <a class="wishlist-red-heart"
@@ -106,7 +112,7 @@
                                     </a>
                                     {% else %}
                                     <a class="wishlist-grey-heart" href="{% url 'add_to_wishlist' product.id %}">
-                                    <small>Add To Wishlist</small>
+                                        <small>Add To Wishlist</small>
                                     </a>
                                     {% endif %}
                                     {% endif %}
