@@ -160,6 +160,11 @@ a.category-badge > span.badge:hover{
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* selection drop down filters  */
+.border-info {
+    border-color: #37168A !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -223,6 +228,9 @@ a.category-badge > span.badge:hover{
       color: #17a2b8; /* text-info */
   }
   
+  h2{
+    color: #37168A;
+  }
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
@@ -254,11 +262,17 @@ a.category-badge > span.badge:hover{
         font-size: 1.5rem;
         font-weight: 300;
         line-height: 1.2;
-        margin-top: 150%;
     }
     .display-4.logo-font.text-black {
         font-size: 0.5rem;
     }
+
+    .h1, h1 {
+        font-size: 2.5rem;
+        margin-top: 50%;
+    }
+
+
 
     .nav-link {
         padding: 0.15rem;

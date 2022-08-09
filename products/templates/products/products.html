@@ -55,7 +55,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                        <span class="small"><a href="{% url 'products' %}">Products Home</style></a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -77,13 +77,13 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body pb-0">
+                        <div class="card-body pb-0" style="color: #37168A;">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold" style="color: #37168A;">£{{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
@@ -100,7 +100,7 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a href="{% url 'edit_product' product.id %}" style="color: #37168A;">Edit</a> |
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                     {% endif %}
@@ -112,7 +112,7 @@
                                     </a>
                                     {% else %}
                                     <a class="wishlist-grey-heart" href="{% url 'add_to_wishlist' product.id %}">
-                                        <small>Add To Wishlist</small>
+                                        <small style="color: #003b00;">|Add To Wishlist</small>
                                     </a>
                                     {% endif %}
                                     {% endif %}
