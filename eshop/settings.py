@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'n_w(0$qq(4q)#3m^ye&v$-4r26)8zz)57%r8etfh$o+&=kxuh_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,11 +128,17 @@ WSGI_APPLICATION = 'eshop.wsgi.application'
 #           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 #   }
-
-DATABASES = {
-     'default': dj_database_url.parse('postgres://dfwfyjdlxotwct:8ff06e8f3cbc3f0fe59b017ba4ae94736014357de7e493aa129b8c8703a44583@ec2-52-51-3-22.eu-west-1.compute.amazonaws.com:5432/dd04mgn86s3rui')
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 # DATABASES = {
 #     'default':{
 #         'ENGINE':
@@ -140,7 +146,6 @@ DATABASES = {
 #         'NAME':os.path.join(BASE_DIR, 'db.sqlite3')
 #     }
 # }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
