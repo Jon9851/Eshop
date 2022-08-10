@@ -114,24 +114,32 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'eshop.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    } 
-else:
-    DATABASES = {
-        'default': {
-          'ENGINE': 'django.db.backends.sqlite3',
-          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
- }
+#  if 'DATABASE_URL' in os.environ:
+#      DATABASES = {
+#          'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#      } 
+#  else:
+#     DATABASES = {
+#         'default': {
+#           'ENGINE': 'django.db.backends.sqlite3',
+#           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+#   }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://dfwfyjdlxotwct:8ff06e8f3cbc3f0fe59b017ba4ae94736014357de7e493aa129b8c8703a44583@ec2-52-51-3-22.eu-west-1.compute.amazonaws.com:5432/dd04mgn86s3rui')
-}
+     'default': dj_database_url.parse('postgres://dfwfyjdlxotwct:8ff06e8f3cbc3f0fe59b017ba4ae94736014357de7e493aa129b8c8703a44583@ec2-52-51-3-22.eu-west-1.compute.amazonaws.com:5432/dd04mgn86s3rui')
+    }
+
+# DATABASES = {
+#     'default':{
+#         'ENGINE':
+#         'django.db.backends.sqlite3',
+#         'NAME':os.path.join(BASE_DIR, 'db.sqlite3')
+#     }
+# }
 
 
 # Password validation
