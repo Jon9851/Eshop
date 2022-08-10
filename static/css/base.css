@@ -5,8 +5,7 @@ body{
     background: url('/media/eshoppage.png') no-repeat center center fixed;
     background-size: cover;
     background-color: white;
-    height: calc(100vh - 164px);
-    color: black;
+    height: calc(100vh - 164px)
     font-family:'Lato', sans-serif;
 }
 
@@ -60,11 +59,6 @@ body{
     background: white;
     color: #37168A;
 }
-
-.text-black {
-    color: black !important;
-}
-
 .border-black {
     border: 3px solid #37168A !important;
 }
@@ -93,15 +87,110 @@ a.category-badge > span.badge:hover{
     cursor: pointer;
 }
 
-/* border color for all images  */
-.border-full{
-   border:  10px solid;
-}
-.border-purple{
-    border-color: #37168A;
+/* header color eshop logo  */
+
+.logo-color{
+    color: #37168A;
+    font-size: 3.5rem;
 }
 
+/* nav bar colors with drop down  */
+.navbar-light .navbar-nav .nav-link {
+    color: #37168A;
+}
+/* logo and my account color and drop down menu   */
+.user-logo, .account-color{
+        color: #37168A;
+} 
 
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #37168A;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.bag-color{
+    color: #37168A;
+}
+/* all text colors */
+.text-black {
+    color: #37168A !important;
+}
+.mb-0, .my-0 {
+    margin-bottom: 0!important;
+    color: #37168A;
+    font-weight: 500;
+}
+/* product page css  */
+
+.border-color{
+    border: 10px solid #37168A;
+}
+
+.edit-color{
+    color: #37168A;
+}
+
+.wishlist-color{
+    color: #003b00;
+}
+/* product details css  */
+
+.product-description{
+    color: #37168A;
+}
+
+.quantity-color{
+    color: #37168A;
+}
+
+.quantity-border{
+    border: 3px solid #37168A;
+}
+
+.fas-fa-chevron-left{
+    color: #37168A;
+}
+.card-title{
+    color: #37168A;
+}
+
+.card-text{
+    color: #37168A;
+}
+/* edit products page css  */
+.btn {
+    border: 1px solid #37168A;
+    color: #37168A;  
+}
+.btn:hover{
+    color: white !important;
+    background-color: #37168A;
+}
+/* bag css */
+
+.product-table{
+    color: #37168A;
+}
+
+.btn-black {
+    background: #37168A;
+    color: white !important;
+}
+
+.sub-total{
+    color: #37168A;
+}
+
+.delivery{
+    color: #37168A;
+}
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -110,7 +199,7 @@ a.category-badge > span.badge:hover{
     right: 15px;
     z-index: 99999999999;
 }
-
+/* toast messages  */
 .custom-toast {
     overflow: visible;
 }
@@ -119,6 +208,11 @@ a.category-badge > span.badge:hover{
     height: 2px;
 }
 
+.bg-white{
+    color: #37168A;
+}
+
+/* checkout and checkout successful page css  */
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
@@ -175,8 +269,11 @@ a.category-badge > span.badge:hover{
     border-color: #37168A !important;
 }
 .h1, h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-top: 50%;
+    color: white;
+    font-weight: 600;
+    text-shadow: 4px 4px  #37168A;
 }
 /* -------------------------------- Media Queries */
 
@@ -305,7 +402,3 @@ a.category-badge > span.badge:hover{
     color: #37168A !important;
 }
 
-.btn {
-    border: 1px solid #37168A;
-  
-}

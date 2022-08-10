@@ -37,11 +37,11 @@
     <title>Eshop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top" style="background-color: #37168A;">
+    <header class="container-fluid fixed-top header-eshop header-color">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font my-0" style="color: #37168A;"><strong>Eshop</strong></h2>
+                    <h2 class="logo-font my-0 logo-color"><strong>Eshop</strong></h2>
                 </a>
             </div>
             <div class="col-10 col-lg-4 my-auto py-1 py-lg-0">
@@ -64,11 +64,11 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg" style="color: #37168A;"></i></div>
-                                <p class="my-0" style="color: #37168A;">My Account</p>
+                                <div><i class="fas fa-user fa-lg user-logo" ></i></div>
+                                <p class="my-0 my-account account-color">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0  dropdown-color" aria-labelledby="full-site-user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -77,8 +77,8 @@
                                 <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item" style="color: #37168A;">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item"  style="color: #37168A;">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -86,8 +86,8 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg" style="color: #37168A;"></i></div>
-                                <p class="my-0" style="color: #37168A;">
+                                <div><i class="fas fa-shopping-bag fa-lg bag-color"></i></div>
+                                <p class="my-0 bag-my">
                                     {% if grand_total %}
                                         £{{ grand_total|floatformat:2 }}
                                     {% else %}

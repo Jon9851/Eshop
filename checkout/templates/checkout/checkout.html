@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4" style="color: #37168A;">Checkout</h2>
+                <h2 class="logo-font mb-4 logo-color">Checkout</h2>
                 <hr>
             </div>
         </div>
@@ -47,7 +47,7 @@
                                 {% endif %}
                             </a>
                         </div>
-                        <div class="col-7" style="color: #37168A;">
+                        <div class="col-7 product-name">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
@@ -59,12 +59,12 @@
                 {% endfor %}
                 <hr class="my-0">
                 <div class="row text-black text-right">
-                    <div class="col-7 offset-2" style="color: #37168A;">
+                    <div class="col-7 offset-2">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Delivery:</p>
                         <p class="my-0">Grand Total:</p>
                     </div>
-                    <div class="col-3" style="color: #37168A;">
+                    <div class="col-3 text-black">
                         <p class="my-0">£{{ total | floatformat:2 }}</p>
                         <p class="my-0">£{{ delivery | floatformat:2 }}</p>
                         <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="text-muted" style="color: #37168A;">Please fill out the form below to complete your order</p>
+                <p class="text-muted text-black">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
@@ -81,7 +81,7 @@
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small px-2 w-auto" style="color: #37168A;">Delivery</legend>
+                        <legend class="fieldset-label small px-2 w-auto text-black">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
@@ -137,7 +137,7 @@
         </div>
     </div>
     <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner" style="color: #37168A;">
+        <h1 class="text-light logo-font loading-spinner logo-color">
             <span class="icon">
                 <i class="fas fa-3x fa-sync-alt fa-spin"></i>
             </span>

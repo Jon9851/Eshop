@@ -17,8 +17,7 @@
             <h2 class="logo-font">Products</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                <span class="p-2 mt-2 badge badge-white rounded-1 border text-purple" 
-                    style="border: 1px solid  #37168A; color: #37168A;">{{ c.friendly_name }}</span>
+                <span class="p-2 mt-2 badge badge-white rounded-1 border text-purple">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
             <hr class="w-50 mb-1">
@@ -55,7 +54,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %} " style="color:#37168A;">Products Home</style></a> | </span>
+                        <span class="small"><a href="{% url 'products' %} ">Products Home</style></a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -66,7 +65,7 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-12 shadow" style="border: #37168A solid 10px;">
+                    <div class="card h-100 border-12 shadow border-color">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -77,13 +76,13 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body pb-0" style="color: #37168A;">
+                        <div class="card-body pb-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold" style="color: #37168A;">£{{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold product-name">£{{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
@@ -100,7 +99,7 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
-                                        <a href="{% url 'edit_product' product.id %}" style="color: #37168A;">Edit</a> |
+                                        <a  class="edit-color" href="{% url 'edit_product' product.id %}">Edit</a> |
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                     {% endif %}
@@ -112,7 +111,7 @@
                                     </a>
                                     {% else %}
                                     <a class="wishlist-grey-heart" href="{% url 'add_to_wishlist' product.id %}">
-                                        <small style="color: #003b00;">|Add To Wishlist</small>
+                                        <small class="wishlist-color">|Add To Wishlist</small>
                                     </a>
                                     {% endif %}
                                     {% endif %}
@@ -150,32 +149,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
-
-<script type="text/javascript">
-    $('#sort-selector').change(function () {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
-
-        var selectedVal = selector.val();
-        if (selectedVal != "reset") {
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
-
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
-
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
-
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
+{% include 'products/includes/quantity_input_script.js' %}
 {% endblock %}

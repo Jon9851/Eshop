@@ -30,24 +30,12 @@
         <!-- product description code -->
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0" style="color: #37168A;">{{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold" style="color: #37168A;">£{{ product.price }}</p>
+                <p class="mb-0 product-name">{{ product.name }}</p>
+                <p class="lead mb-0 text-left font-weight-bold product-name">£{{ product.price }}</p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                    </a>
-                    {% if product in wishlist %}
-                    <a class="wishlist-red-heart"
-                        href="{% url 'remove_from_wishlist' product.id 'products' %}">
-                        <i class="fas fa-heart"></i>
-                    </a>
-                    {% else %}
-                    <a class="wishlist-grey-heart" href="{% url 'add_to_wishlist' product.id %}">
-                        <medium style="color: #003b00;">|Add To Wishlist</medium>
-                    </a>
-                    {% endif %}
-
                 </p>
                 {% endif %}
                 {% if product.rating %}
@@ -62,19 +50,19 @@
                     <i class="fas fa-heart"></i>
                 </a>
                 {% else %}
-                <a class="wishlist-grey-heart" href="{% url 'add_to_wishlist' product.id %}">
-                    <small style="color: #003b00;">|Add To Wishlist</small>
+                <a class="wishlist-grey-heart wishlist-color" href="{% url 'add_to_wishlist' product.id %}">
+                    <small>|Add To Wishlist</small>
                 </a>
                 {% endif %}
                 {% endif %}
-                <p class="mt-3" style="color: #37168A;">{{ product.description }}</p>
+                <p class="mt-3 product-description">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
-                    <div class="form-row">
+                    <div class="form-row quantity-color">
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
-                            <div class="form-group w-50" style="border: 3px solid #37168A;">
-                                <div class="input-group" style="color: #37168A;">
+                            <div class="form-group w-50 quantity-border">
+                                <div class="input-group">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-black rounded-0"
                                             aria-labelledby="minus-button" data-item_id="{{ product.id }}"
@@ -101,7 +89,7 @@
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-3 mt-5">
                                 <span class="icon">
-                                    <i class="fas fa-chevron-left" style="color: #37168A;"></i>
+                                    <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
@@ -118,5 +106,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+{% include 'products/includes/quantity_input_script.js' %}
 {% endblock %}
