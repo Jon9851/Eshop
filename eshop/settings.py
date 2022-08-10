@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     #Other
     'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
+            
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
@@ -188,6 +190,15 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'eshopms4'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
 
 #stripe
 FREE_DELIVERY_THRESHOLD = 200
