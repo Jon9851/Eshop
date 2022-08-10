@@ -93,6 +93,15 @@ a.category-badge > span.badge:hover{
     cursor: pointer;
 }
 
+/* border color for all images  */
+.border-full{
+   border:  10px solid;
+}
+.border-purple{
+    border-color: #37168A;
+}
+
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -164,6 +173,10 @@ a.category-badge > span.badge:hover{
 /* selection drop down filters  */
 .border-info {
     border-color: #37168A !important;
+}
+.h1, h1 {
+    font-size: 2.5rem;
+    margin-top: 50%;
 }
 /* -------------------------------- Media Queries */
 
