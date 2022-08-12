@@ -167,7 +167,7 @@ a.category-badge > span.badge:hover{
 /* edit products page css  */
 .btn {
     border: 1px solid #37168A;
-    color: #37168A;  
+    color: white !important;  
 }
 .btn:hover{
     color: white !important;
