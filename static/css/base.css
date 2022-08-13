@@ -173,6 +173,9 @@ a.category-badge > span.badge:hover{
     color: white !important;
     background-color: #37168A;
 }
+.keep-shopping{
+    color: #37168A;
+}
 /* bag css */
 
 .product-table{
@@ -344,7 +347,7 @@ p {
   }
   
   h2{
-    color: #37168A;
+    color: white;
   }
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
@@ -407,3 +410,10 @@ p {
     color: #37168A !important;
 }
 
+/* all  a links  */
+
+a {
+     color: #37168A;
+    text-decoration: none;
+    background-color: transparent;
+}
