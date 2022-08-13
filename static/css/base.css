@@ -168,6 +168,7 @@ a.category-badge > span.badge:hover{
 .btn {
     border: 1px solid #37168A;
     color: #37168A !important;
+    background-color:white;
 }
 .btn:hover{
     color: white !important;
@@ -419,4 +420,17 @@ a {
 }
 .text-info {
     color: #37168A !important;
+}
+
+/* profile table  */
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #37168A;
+}
+
+/* form information text */
+.form-control {
+    color: #37168A
 }
