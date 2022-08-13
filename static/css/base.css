@@ -167,7 +167,9 @@ a.category-badge > span.badge:hover{
 /* edit products page css  */
 .btn {
     border: 1px solid #37168A;
-    color: white !important;  
+    color: #37168A !important; 
+    background-color: white;
+
 }
 .btn:hover{
     color: white !important;
@@ -416,4 +418,7 @@ a {
      color: #37168A;
     text-decoration: none;
     background-color: transparent;
+}
+.text-info {
+    color: #37168A !important;
 }
