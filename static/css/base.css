@@ -346,7 +346,16 @@ p {
   .allauth-form-inner-content a {
       color: #17a2b8; /* text-info */
   }
-  
+  .allauth-form-inner-content button, .allauth-form-inner-content input {
+    background-color: #37168A;
+    border: 1px solid #37168A;
+    color: #37168A;
+}
+.allauth-form-inner-content button, .allauth-form-inner-content input:hover {
+    background-color: #37168A;
+    border: 1px solid #37168A;
+    color: white;
+}
   h2{
     color: white;
   }
@@ -430,7 +439,10 @@ a {
     color: #37168A;
 }
 
-/* form information text */
+/* form information text and labels  */
 .form-control {
     color: #37168A
+}
+label {
+    color: #37168A;
 }
