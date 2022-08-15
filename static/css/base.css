@@ -339,12 +339,12 @@ p {
   .allauth-form-inner-content button:hover,
   .allauth-form-inner-content input[type='submit']:hover {	
       color: #fff;
-      background-color: #222;
-      border-color: #222;
+      background-color: red;
+      border-color: red;
   }
   
   .allauth-form-inner-content a {
-      color: #17a2b8; /* text-info */
+      color: #37168A; /* text-info */
   }
   .allauth-form-inner-content button, .allauth-form-inner-content input {
     background-color: #37168A;
@@ -355,6 +355,13 @@ p {
     background-color: #37168A;
     border: 1px solid #37168A;
     color: white;
+}
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #37168A;
+}
+.allauth-form-inner-content a {
+    color: #37168A;
 }
   h2{
     color: white;
