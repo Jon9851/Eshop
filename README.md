@@ -86,7 +86,7 @@ includes integrated responsiveness package.
 [Contents](<#contents>)
 
 # Design Choices
- When i was designing the Eshop e-commerce store I wanted it to be to be simple to use for the user with a simple nave bar with a dropdown menu which contains all the different categories and products the online store has to offer. Once again the time frame for this project was very tight so i used bootstrap 4 to create a lot features the site has to offer. I choose a purple and white as the main colors for the site with red only serving as warning color. Django Alluth and crispy forms where also used in the creation of the online store for the security of the site and design of the forms. 
+ When i was designing the Eshop e-commerce store I wanted it to be to be simple to use for the user with a simple nave bar with a dropdown menu which contains all the different categories and products the online store has to offer. Once again the time frame for this project was very tight so i used bootstrap 4 to create a lot features the site has to offer. I choose a purple and white as the main colors for the site with red only serving as warning color. Django Allauth and crispy forms where also used in the creation of the online store for the security of the site and design of the forms. 
 
  On the products page I have chosen to put the product cards in rows of 4 with a purple border, surrounding the card. Inside the card I have put edit and delete buttons with a category tag and a price and a brief description of the product, this has been done to mainly have the users focus to be on the products themselves, due to user feedback I included links to the product detail page on the descriptions. 
 
@@ -148,9 +148,20 @@ There are two ways admin and staff can edit product information either on the Dj
 ![Product_Management](documentation/read_me_images/eshopmanagement3.png)
 
 ### Order Complete
-COnformation once an order has been completed are shown in the images below
+Conformation once an order has been completed are shown in the image below.
 ![Order_Complete](documentation/read_me_images/eshopordercomplete.png)
-![Order_Complete](documentation/read_me_images/eshopordercomplete1.png)
+
+### Django Allauth
+Most existing Django apps that address the problem of social authentication focus on just that. You typically need to integrate another app in order to support authentication via a local account.
+
+This approach separates the worlds of local and social authentication. However, there are common scenarios to be dealt with in both worlds. For example, an e-mail address passed along by an OpenID provider is not guaranteed to be verified. So, before hooking an OpenID account up to a local account the e-mail address must be verified. So, e-mail verification needs to be present in both worlds.
+
+Integrating both worlds is quite a tedious process. It is definitely not a matter of simply adding one social authentication app, and one local account registration app to your INSTALLED_APPS list.
+
+This is the reason this project got started – to offer a fully integrated authentication app that allows for both local and social authentication, with flows that just work.
+
+Commercial Support
+* [Django_Allauth](https://pypi.org/project/django-allauth/)
 
 #### Data Schema 
 
@@ -185,7 +196,61 @@ Also this shows that the checkout is updated by using the order Line item model 
 9. Create a git remote for heroku
 10. Push all changes to the staging area
 11. Push to heroku for your app to run and function.
- 
+
+### AWS
+1. Buckets are used to store files for your live site.
+2. On dashboard, search and open S3
+3. In Amazon s3:
+3. Create a new bucket
+4. Fill in details
+5. Uncheck block all public access
+6. Check Acknowledge bucket will be public
+7. Click Create bucket
+8. In your new bucket
+9. On Properties tab
+10. Select Static website hosting
+10. Check Use this bucket to host a website and fill in default values then click 'Save'
+11. On 'Permissions' tab:
+12. Go to 'CORS configuration' section and paste: [{ "AllowedHeaders": ["Authorization"],"AllowedMethods": ["GET"],"AllowedOrigins": ["*"],"ExposeHeaders": []}]
+13. Go to 'Bucket Policy' section
+14. Click 'Policy generator' to create a security policy for the bucket
+15. Select 'S3 Bucket Policy' for Type of Policy
+16. Enter * in the 'Principal' sections to allow all principals
+17. Select GetObject in 'Actions' section
+18. Copy ARN (amazon resource name) from 'Bucket Policy' tab and past into ARN box on Policy Generator tab
+19. Click 'Add Statement' > 'Generate Policy'
+20. Copy and paste th policy into the 'bucket policy editor'
+21. On the end of 'Resource key' section of the policy add /* to allow access to all resources in the bucket
+22. Click 'Save'
+
+
+### IAM User
+1. This is used to access your bucket, you will create a group for the user, create an access policy so the group can access you bucket, then assign the user to the group so it   can use the policy to access all your files
+2. On AWS dashboard search and open IAM
+3. On IAM dashboard
+4. On 'Groups' tab:
+5. Click 'Create New Group', give it a name, then click next till you come to 'Create Group'
+6. On 'Policies' tab:
+7. Click 'Create Policy'
+8. Go to 'JSON' tab
+9. Click 'import managed policy'
+10. Search for S3, and import the pre-built 's3 full access' policy
+11. Get your bucket ARN and paste it twice; once as it is, and once with /* at the end, after "Resource": and in square brackets: [ "<YOUR_BUCKET_ARN>", "<YOUR_BUCKET_ARN>/*" ]
+12. Click 'Review policy'
+11. Give it a name and description
+12. Click 'Create Policy'
+13. On 'Groups' tab:
+14. Select your bucket
+15. Click 'Attach Policy'
+16. Search, select and attach your newly created policy
+17. On 'Users' tab:
+18. Click 'Add User'
+19. Create a user for your static files
+20. Check 'Programmatic access' box
+21. Click 'Next' to go to permissions page
+22. Check the box to select the group you just made
+23. Click next until you reach 'Create User'
+24. Download and save the CSV file by clicking 'Download CSV'. This will contain the users access key and secret access key Once you leave the page you will not be able to return and download the file again
  # Technologies Used
    
 * [HTML5](https://html.spec.whatwg.org/) -Used to create the contents and structure for the website.
@@ -202,7 +267,9 @@ Also this shows that the checkout is updated by using the order Line item model 
 * [mongodb](https://www.mongodb.com) - Used for the user db 
 * [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) User for the publisher games and reviews db 
 * [PEP8 Online Checker](http://pep8online.com/) Use to check python routes
-* [Materialize](https://materializecss.com/) Used to create html templates
+* [Bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) Used to create html templates
+* [Django](https://www.djangoproject.com/) Used to create eshop.
+* [Django_Allauth](https://pypi.org/project/django-allauth/) Used to create the security for the app
 
 
 
@@ -231,11 +298,11 @@ Also this shows that the checkout is updated by using the order Line item model 
 1. W3schools- I used their tutorials on HTML and CSS for further understanding and troubleshooting  throughout my project.
 2. Stack Overflow- I used Stack Overflow to get a more in depth understanding on HTML and CSS throughout my project.
 3. Code Institute Example of the READ.MD- I used these as template when planning and writing my README file.
-4.Code Institute tutors that helped me during my project.
+4. Code Institute tutors that helped me during my project.
 
 [Contents](<#contents>)
 
 # Acknowledgements
  
- The site was cerated for my milestone project 3 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would also like to thank [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidances and help as his feedback was extremely key in completing my third milestone project.
- Brain Codex for help during the creation process. 
+ The site was cerated for my milestone project 4 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would also like to thank [Tom Martin](https://www.linkedin.com/in/tom-martin-245919224/) for his  help as his feedback and support which was extremely key in completing my fourth milestone project.
+ 
