@@ -150,6 +150,7 @@ There are two ways admin and staff can edit product information either on the Dj
 ### Order Complete
 Conformation once an order has been completed are shown in the image below.
 ![Order_Complete](documentation/read_me_images/eshopordercomplete.png)
+![Order_Complete](documentation/read_me_images/eshopordercomplete1.png)
 
 ### Django Allauth
 Most existing Django apps that address the problem of social authentication focus on just that. You typically need to integrate another app in order to support authentication via a local account.
