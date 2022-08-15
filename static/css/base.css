@@ -454,7 +454,7 @@ label {
 }
 /* verification Page */
 .text-height, h1{
-    margin-top: 30% !important;
+    margin-top: 30%;
     color: white;
     text-shadow: 2px 2px #37168A;
 }
@@ -463,4 +463,13 @@ label {
     color: #37168A;
     font-size: 20px;
     background-color: white !important;
+}
+
+@media (max-width: 991px){
+    .text-height,h1 {
+        margin-top: 60%;
+    }
+    .text-height,p{
+        margin: 1%;
+    }
 }
