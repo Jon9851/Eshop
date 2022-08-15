@@ -18,8 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get(
-    'SECRET_KEY', 'n_w(0$qq(4q)#3m^ye&v$-4r26)8zz)57%r8etfh$o+&=kxuh_')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'n_w(0$qq(4q)#3m^ye&v$-4r26)8zz)57%r8etfh$o+&=kxuh_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,7 +46,7 @@ INSTALLED_APPS = [
     'profiles',
     'wishlist',
 
-    # Other
+    #Other
     'crispy_forms',
     'storages'
 ]
@@ -77,7 +76,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -116,31 +115,29 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'eshop.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
-# if 'DATABASE_URL' in os.environ:
-#    DATABASES = {
-#        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#    }
-#    else:
-#   DATABASES = {
-#        'default': {
-#            'ENGINE': 'django.db.backends.sqlite3',
-
-#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#        }
-#    }
-
-DATABASES = {
-     'default':{
-
-         'ENGINE':
-         'django.db.backends.sqlite3',
-         'NAME':os.path.join(BASE_DIR, 'db.sqlite3')
-     }
- }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+# DATABASES = {
+#     'default':{
+#         'ENGINE':
+#         'django.db.backends.sqlite3',
+#         'NAME':os.path.join(BASE_DIR, 'db.sqlite3')
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -185,7 +182,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
-    # cache control
+    #cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
@@ -209,7 +206,7 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 
-# stripe
+#stripe
 FREE_DELIVERY_THRESHOLD = 200
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'gbp'
@@ -217,3 +214,16 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51LTOUGLHWTaJalw5OJW
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51LTOUGLHWTaJalw5HzwhBXEcn9tdMK8jcc6iKuw9FtFbdsgkzyOPBIIvhZc0MCh9SStEmqVifFjGWh7ChUZipIAG00GLZUqG0M')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'eshop@example.com'
+
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'eshop@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
