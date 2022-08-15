@@ -4,11 +4,9 @@ WELCOME TO Eshop
 
 Welcome to Eshop an online e-commerce store which server as your one stop shop for all your tech needs. There are plans to add products to our already growing inventory very soon. This online store was created using Django frameworks and PostgreSQL to manage the inventory database. The shop features a secure checkout payment with stripe payments which links in to the user profile and a complete order history included on the profile page. Eshop has many more features which will included down below.
 
-Eshop<a href="https://eshopms4.herokuapp.com/" target="_blank" rel="noopner">Game Review</a>
+<a href="https://eshopms4.herokuapp.com/" target="_blank" rel="noopner">Eshop</a>
 
-
-
-![Games Review responsiveness ](gamesreviewc/static/image/responisvems3.png)
+![Eshop responsiveness ](documentation/read_me_images/responsive.png)
 
 # Contents
 
@@ -19,13 +17,13 @@ Eshop<a href="https://eshopms4.herokuapp.com/" target="_blank" rel="noopner">Gam
        * [Color Scheme](<#color-scheme>)
    * [**Features**](<#features>)
        * [Home](<#Home>)
-       * [Game](<#Game>)
-       * [Publishers](<#Publishers>)
-       * [Titles](<#Tiles>)
-       * [Reviews](<#Reviews>)
+       * [Products](<#Products>)
+       * [Product_Details_Page](<#Product_Details_Page>)
+       * [Shopping_Bag](<#Shopping_Bag>)
+       * [Checkout_Page](<#Checkout_Page>)
        * [Profile](<#Profile>)
-       * [Werkzeug](<#Werkzeug>)
-       * [Defensive](<#Defensive>)
+       * [Product_Management](<#Product_Management>)
+       * [Order_Complete](<#Order_Complete>)
        * [Data Schema](<#Data-Schema>)
 * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#Technologies-Used>)
@@ -75,43 +73,35 @@ Eshop<a href="https://eshopms4.herokuapp.com/" target="_blank" rel="noopner">Gam
 
 
 # Wireframes
-The wire-frames for ‘Games Review’ were produced in[Balsamiq](https://balsamiq.com).
+The wire-frames for ‘Eshop’ were produced in[Balsamiq](https://balsamiq.com).
 There are frames for a full width display ( 1920 x 1080 package)and a small mobile 
 device (360 x 640). The final site varies slightly from the wire-frames due to bugs and design 
-changes during development that occurred during the creation process. Mobile wire-frames haven`t been included due to the use of Materialize as this
-includes integrated  responsiveness package.
+changes during development that occurred during the creation process. Mobile wire-frames haven`t been included due to the use of  bootstrap4 and django frameworks this
+includes integrated responsiveness package.
 
- 
+![Wireframe Desktop](documentation/wifreframes/eshopwireframe.png)
+![Wireframe Desktop](documentation/wifreframes/eshopwireframe2.png)
 
-![Wireframe Desktop]
-![Wireframe Desktop]
-![Wireframe Desktop]
 
 [Contents](<#contents>)
 
 # Design Choices
- When designing the games review database I wanted it to be to be simple to use, as I wanted the CRUD functionality to be present in the database . Games review contains 13 pages which 11 pages related to Crud functions with in the database. After spending serval hours looking at Materialize i eventually decided on cards, collapsibles and a nav bar with a built in side nav bar for the design. I wanted the overall look of the side to feel simple and easy to use. All pages are linked up with either url`s or with buttons directing you to the different pages on the site.
+ When i was designing the Eshop e-commerce store I wanted it to be to be simple to use for the user with a simple nave bar with a dropdown menu which contains all the different categories and products the online store has to offer. Once again the time frame for this project was very tight so i used bootstrap 4 to create a lot features the site has to offer. I choose a purple and white as the main colors for the site with red only serving as warning color. Django Alluth and crispy forms where also used in the creation of the online store for the security of the site and design of the forms. 
 
- The nav bar covers all 13 pages of the site which is kept on the base template, across all the pages i have put in a background image which gives the site a nice contrasts from the text on the page. Early on in the design I knew i was going to use green for the overall look of the site, I originally choose blue for the text, but due to it being difficult to see I changed the text color scheme to white which stood out more. 
+ On the products page I have chosen to put the product cards in rows of 4 with a purple border, surrounding the card. Inside the card I have put edit and delete buttons with a category tag and a price and a brief description of the product, this has been done to mainly have the users focus to be on the products themselves, due to user feedback I included links to the product detail page on the descriptions. 
 
-The game page was designed to give users ideas of games ideas that they can input into the database. All the images on the games page are for educational purposes only.
-The design for the page comes from materialize cards which i edited the background to white and the text to a dark green color.
 
-During the final stages of development I choose to lock out users from deleting publishers as this ties all the relational database together. I wanted to give the uses so feed back and warning messages so i choose to implement flash messages.
- 
-
-![Hex Colors ](gamesreviewc/static/image/hex3.png)
+![Hex Colors ](documentation/read_me_images/eshophex.png)
  
  
  THe colors that where chosen  are displayed in image above.
 
- Green darken 2 #388e3c was used for the nav bar footer and other elements with in the site
+ Purple #37168a was used for border and text.
 
- Green darken 4 #1b5e20 was used for the text on the games page so the text would stand out. 
+ red  #ff0000 was used for warnings and buttons. 
  
- White was used for a few various things backgrounds and text and flash messages.
+ White was used for a few various things backgrounds and text, flash messages and text.
 
- The buttons colors are red black and yellow.
 
   
 
@@ -119,44 +109,61 @@ During the final stages of development I choose to lock out users from deleting 
 
 # Features
 ### Home 
-The home page features a nav bar which has lock function depending on whether you are logged or out. Below the nav bar you have a text slider with quotes from different video 
-games, and below that you have and image slider with four different games images combined in to a single changing image, and a footer which covers all 13 pages. The image slider positioning is a small bug as it appears differently on different devices.
+The home page features a nav bar with dropdown menu so the user can select the different categories available this covers all pages of the online store. Included at the top of the page is a search bar and in the top right is a profile menu and a shopping bag. Below that there is an image and a button that takes you through to the online store all products page. 
+![Home](documentation/read_me_images/eshophome.png)
+
+### Products Pages
+All the product pages have the same designs which includes a simple border and a picture and product information on them.
+
+![Products](documentation/read_me_images/eshoproducts.png)
+
+### Product Details Page
+This page contains an image of the product with a more detailed description of the item. Below that information is the price wishlist link so user can items to their wishlist
+![Product_Details_Page](documentation/read_me_images/eshopdetails.png)
+![Product_Details_Page](documentation/read_me_images/eshopdetails1.png)
+
 ![Home](gamesreviewc/static/image/homegr.png)
 
-### Games
-The game page features cards from materialize with different games images and a brief description of them.
-![Game]
+### shopping Bag
+The checkout page features information on what you are about to purchases.
 
-### Publishers
-The publishers page is the key part of the database as you cant add anything in till you first add a publisher. The publishers page features a fully functioning Crud system with edit and delete
-buttons but only admin can delete publishers.The publishers page also provides links to the add and edits pages so you user can edit if they change there minds.
+![Home](documentation/read_me_images/eshopcheckout.png)
 
-![Publishers]
+### Checkout Page 
+The checkout page features your basic information you would expect to find on a checkout. The from covers everything form you your name to your address and card details.
 
-
-### Titles
-The titles pages is where you can add games to the site, the titles page features collapsible with the publisher names on the drop and in the drop down there is review, edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete games as they wish with a flash message appearing to warn them about deleting the games.
-
-![Titles]
-
-
-### Reviews
-The Review pages is where you can add reviews to the site, the reviews page features collapsibles
- with the game names on the drop and in the drop down there is edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete reviews as they wish with a flash message appearing to warn them about deleting the reviews. (bug game name wont appear i left out the jinja syntax for this reason)
-
-![Reviews]
-
+![Checkout](documentation/read_me_images/eshopcheckout1.png)
+![Checkout](documentation/read_me_images/eshopcheckout2.png)
 ### Profile
-The profile pages displays the use login details once they have registered on the site with a flash message.
+The profile pages displays the use login details in a form with delivery information and recent order history purchases. 
 the login and register page are very Similar the only differences are the text on the pages. The login and register pages are very simple in there design. 
 
-![Profile]
+![Profile](documentation/read_me_images/eshopprofile.png)
 
-#### Data Scema 
+### Product management
+There are two ways admin and staff can edit product information either on the Django admin page or on the product management page. 
+![Product_Management](documentation/read_me_images/eshopmanagement.png)
+![Product_Management](documentation/read_me_images/eshopmanagement1.png)
+![Product_Management](documentation/read_me_images/eshopmanagement2.png)
+![Product_Management](documentation/read_me_images/eshopmanagement3.png)
 
-The image below details my database schema on how all my relationships within my database are connected and. 
+### Order Complete
+COnformation once an order has been completed are shown in the images below
+![Order_Complete](documentation/read_me_images/eshopordercomplete.png)
+![Order_Complete](documentation/read_me_images/eshopordercomplete1.png)
 
-![Data-Schema]
+#### Data Schema 
+
+Above is the data schema for the relational database in the Eshop Models.
+
+For the the relationship between the products and the wishlist, this is a one to many relationship meaning many products can go into 1 wishlist. This is also the same between the products and categories, as many products can go into one category.
+
+This diagram also shows that per order only 1 order number is assigned showing a 1 to 1 relationship.
+What this diagram describes is that the relationship between the profile and wishlist is a 1 to 1 relationship meaning for each profile you can create 1 wishlist. 
+
+Also this shows that the checkout is updated by using the order Line item model as a 1 to 1 relationship. This is also the case for the relationship between the profile and user model.
+
+![Data-Schema](documentation/schema/eshopdiagram.png)
 
 
 [Contents](<#contents>)
