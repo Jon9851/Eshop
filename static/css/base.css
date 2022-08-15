@@ -347,7 +347,6 @@ p {
       color: #37168A; /* text-info */
   }
   .allauth-form-inner-content button, .allauth-form-inner-content input {
-    background-color: #37168A;
     border: 1px solid #37168A;
     color: #37168A;
 }
@@ -452,4 +451,14 @@ a {
 }
 label {
     color: #37168A;
+}
+/* verification Page */
+.text-color, h1{
+    margin-top: 20%;  
+}
+
+.text-color, p{
+    color: white !important;
+    text-shadow: 2px 2px #37168A !important;
+    font-size: medium;
 }
