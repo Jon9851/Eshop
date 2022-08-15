@@ -453,12 +453,14 @@ label {
     color: #37168A;
 }
 /* verification Page */
-.text-color, h1{
-    margin-top: 20%;  
+.text-height, h1{
+    margin-top: 30% !important;
+    color: white;
+    text-shadow: 2px 2px #37168A;
 }
 
-.text-color, p{
-    color: white !important;
-    text-shadow: 2px 2px #37168A !important;
-    font-size: medium;
+.text-height, p{
+    color: #37168A;
+    font-size: 20px;
+    background-color: white !important;
 }
