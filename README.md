@@ -305,5 +305,5 @@ Also this shows that the checkout is updated by using the order Line item model 
 
 # Acknowledgements
  
- The site was cerated for my milestone project 4 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would also like to thank [Tom Martin](https://www.linkedin.com/in/tom-martin-245919224/) for his  help as his feedback and support which was extremely key in completing my fourth milestone project.
+ The site was cerated for my milestone project 4 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would also like to thank [Tom Martin](https://www.linkedin.com/in/tom-martin-245919224/) for his  help as his feedback and support which was extremely key in completing my fourth milestone project. The wishlist app was sourced from stack overflow.
  

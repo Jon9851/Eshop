@@ -5,7 +5,7 @@
                 aria-haspopup="true" aria-expanded="false" style="color: #37168A;">
                 All Products
             </a>
-            <div class="dropdown-menu" aria-labelledby="all-products-link">
+            <div class="dropdown-menu" aria-labelledby="dropdown-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item" >By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
@@ -14,18 +14,16 @@
         </li>
         <!-- desktop and laptops code for the nav bar -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link" href="#" id="desktops-laptops-link"
+            <a class="logo-font font-weight-bold nav-link" href="#" id="dropdown-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Desktops/Laptops
             </a>
 
-            <div class="dropdown-menu border-0 text-black" aria-labelledby="desktop-laptops-link">
-                <a href="{% url 'products' %}?category=desktop_pc" class="dropdown-item">Desktop
-                    Pc</a>
+            <div class="dropdown-menu border-0 text-black" aria-labelledby="dropdown-items">
+                <a href="{% url 'products' %}?category=desktop_pc" class="dropdown-item">DesktopPc</a>
                 <a href="{% url 'products' %}?category=laptops" class="dropdown-item">Laptops</a>
                 <a href="{% url 'products' %}?category=gaming_laptops" class="dropdown-item">Gaming Laptops</a>
-                <a href="{% url 'products' %}?category=gaming_pc" class="dropdown-item">Gaming
-PC</a>
+                <a href="{% url 'products' %}?category=gaming_pc" class="dropdown-item">GamingPC</a>
             </div>
         </li>
         <!-- accessories code for the nav bar  -->
