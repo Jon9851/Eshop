@@ -49,7 +49,7 @@ Welcome to Eshop an online e-commerce store which server as your one stop shop f
  ### First time Visitor Goals 
 1. All available products in separate categories  
 2. All products have detailed description 
-3. The amount of products available on the page
+3. The amount of products displayed on the page
 4. Easy user interface 
 5. Search bar 
 6. Order conformation
