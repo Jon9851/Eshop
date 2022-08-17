@@ -64,7 +64,7 @@ Testing on Pep8 checkout signals
 
 Testing on Pep8 checkout views
 
-![Testing on Pep8 checkout views](documentation/testing_images/pep8/checkoutviewspep8.png)
+![Testing on Pep8 checkout views](documentation/testing_images/pep8/checkoutviewspep82.JPG)
 
 Testing on Pep8 wishlist models
 
@@ -142,13 +142,27 @@ I would have liked to do more on this put due my limited understanding on this a
 | A feature to save personal information and delivery information | Pass     | n/a  |
 
 ### Responsiveness Testing 
+| Responsiveness Test                             | Result                 | Pass |
+|-------------------------------------------------|------------------------|------|
+| All images resizes to fit the smaller cards     | Works correctly        | Pass |
+| shopping bag buttons resize correctly           | Resizing issues        | Fail |
+| Hamburger icon no colour                        | Fixed with in base css | Pass |
+| Drop menu hamburger buttons on smaller devices  | Works correctly        | Pass |
+| Image cards resize to 1 per  row                | Works correctly        | Pass |
+| Search bar resize and still functions           | Works correctly        | Pass |
+| Text resizes on smaller devices                 | Works correctly        | Pass |
+| All buttons resize                              | Works correctly        | Pass |
+| Quantity buttons and number bar resize          | Alignment issues       | Fail |
+| Check forms resize to fit the page              | Works correctly        | Pass |
+| Icon stack in rows of three on the nav bar      | Works correctly        | Pass |
+| Mini shopping toast card resizes correctly      | Works correctly        | Pass |
+| All toast messages resize to fit the devices    | Works correctly        |      |
 
 # BUGS
- 
-
-  1..
-  2. 
-  3. 
+  1. The only bugs i could find was on the checkout page, where text and the quantity input bars would not resize correctly 
+  2. Javascript appearing in the source code even though i put them in separate js files. I have tried to fix as i wanted clean code through out my site.
+  3. Toast javascript appearing on the base.html page I tired to put them in separate js file but was unable to get it to work.
+  4. I know this isn`t technically a bug but due to the lack of automated testing on the LMS i was unable to put more test in this annoying as was trying to achieve a hire grade than a pass. 
 
 # Accessibility
 
