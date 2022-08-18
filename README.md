@@ -271,6 +271,10 @@ Also this shows that the checkout is updated by using the order Line item model 
 * [Bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) Used to create html templates
 * [Django](https://www.djangoproject.com/) Used to create eshop.
 * [Django_Allauth](https://pypi.org/project/django-allauth/) Used to create the security for the app
+* [Dropbox](https://www.dropbox.com/)Used to store images before AWS deployment.
+* [Miro](https://miro.com/)Used to create the eshop diagram
+* [Amazon Web Services](https://aws.amazon.com/?nc2=h_lg)Used on the deployed version to store static files and images files.
+* [Stripe](https://dashboard.stripe.com/)Used for card payments on the online store.
 
 
 

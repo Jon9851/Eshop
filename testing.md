@@ -96,9 +96,10 @@ Testing on Pep8 profile views
 
 
 # Automated Testing
-I would have liked to do more on this put due my limited understanding on this and very little coverage on this subject on the LMS i have only managed to incorporate 3 functioning test.
+I would have liked to do more on this put due my limited understanding on this and very little coverage on this subject on the LMS i have only managed to incorporate 3 functioning test. I  have included images of the commits as proof of the test
 
 ![Automated testing](documentation/testing_images/eshopautomatedtest.png)
+![Automated testing](documentation/testing_images/automated_test_commits.png)
 
 # Build vs  Deployment 
 | Test Build Vs Deployed Build                                         | Build Version                             | Deployed version       | Pass  | Errors   |
