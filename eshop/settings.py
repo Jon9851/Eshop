@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'n_w(0$qq(4q)#3m^ye&v$-4r26)8zz)57%r8etfh$o+&=kxuh_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['eshopms4.herokuapp.com', 'localhost']
 
