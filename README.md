@@ -43,8 +43,26 @@ Welcome to Eshop an online e-commerce store which server as your one stop shop f
 
  The target audience for this site are, people that tired of these big online stores, trying to sell you stuff you don’t want or stock they can’t sell. Eshop has the best products available to buy at best prices for people that don’t want to spend loads of money but still want the best tech on the market today. 
 
- Eshop was designed with security in mind. From the secure checkout, and to pages that have restricted access for the users to keep their information safe, such as the wish list and user profile including delivery information and a complete order history available so why not shop today. 
+ Eshop was designed with security in mind. From the secure checkout, and to pages that have restricted access for the users to keep their information safe, such as the wish list and user profile including delivery information and a complete order history available so why not shop today. Below i have included statistics to justify my reasoning for picking an ecommerce store as my final project.
 
+ <!-- Online Shopping vs In-Store Shopping in 2022-https://fashiondiscounts.uk/statistics-on-online-shopping-vs-in-store-shopping/ -->
+* [Online Shopping vs In-Store Shopping](https://fashiondiscounts.uk/statistics-on-online-shopping-vs-in-store-shopping/)
+
+Ecommerce has been growing at a remarkable pace for the last ten years, primarily due to its convenience. Its popularity simply exploded during the lockdown in 2020, as it presented shoppers with a safe alternative to visiting physical stores.
+
+UK online retail sales have more than tripled in the last ten years.
+
+Ecommerce in the UK grew 46.5% in 2020.29.6% of UK consumer spending is expected to shift to online purchases permanently.
+
+55% of UK shoppers will continue to use primarily online channels after the pandemic.
+
+80% of global consumers feel comfortable with returning to physical stores.
+
+35% of shoppers browse online stores for fashion inspiration at least once a week.
+
+ In-store and mobile commerce are the two most popular shopping channels.
+
+Additionally, websites often have more exclusive sales and discounts than in physical stores, and you may be able to find products that were not discounted in-store available online for a much cheaper price. You are then able to pick these products up from your local store or get them delivered to your house.
 
  ### First time Visitor Goals 
 1. All available products in separate categories  
