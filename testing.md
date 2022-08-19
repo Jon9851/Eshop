@@ -3,7 +3,7 @@
 * [**Bugs**](<#bugs>)
 * [**Accessibility**](<#accessibilty>)
 # Testing
-W3C markup validator and W3C CSS validator were used to test and validate all the code on all 4  pages of history quiz to ensure that there were no syntax errors. JS hint was used to test the Javascrpit and PEP8 online checker for python errors.
+W3C markup validator and W3C CSS validator were used to test and validate all the code on all 4  pages of history quiz to ensure that there were no syntax errors. JS hint was used to test the Javascript and PEP8 online checker for python errors.
 
  # index
 The image below is testing for the index.html file, only javascript causing warnings. 

@@ -225,7 +225,7 @@ Also this shows that the checkout is updated by using the order Line item model 
 22. Click 'Save'
 
 
-### IAM User
+### IAM On AWS
 1. This is used to access your bucket, you will create a group for the user, create an access policy so the group can access you bucket, then assign the user to the group so it   can use the policy to access all your files
 2. On AWS dashboard search and open IAM
 3. On IAM dashboard
@@ -292,7 +292,7 @@ Also this shows that the checkout is updated by using the order Line item model 
    5. Type git clone, and then paste the URL copied from GitHub.
    6. Press enter and the local clone will be created.
 
-   ![clone Image ]
+   ![clone Image]
 
 
 
