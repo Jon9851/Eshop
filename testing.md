@@ -37,13 +37,8 @@ The image below is testing for the bag page, javascript causing warnings.
 ![Testing on W3C Html](documentation/testing_images/w3vaildtor.png)
 
 # CSS testing for all pages on base css
-![Testing on W3C CSS](documentation/testing_images/w3vaildtor.png)
+![Testing on W3C CSS](documentation/testing_images/csseshop.png)
 
-
-# PEP8 Testing 
-No issues found Materialize all code works.
-
-![Testing on PEP8 Html]
 
 # PEP8 Testing 
 Testing on Pep8 shopping bag
@@ -157,13 +152,14 @@ I would have liked to do more on this put due my limited understanding on this a
 | Check forms resize to fit the page              | Works correctly        | Pass |
 | Icon stack in rows of three on the nav bar      | Works correctly        | Pass |
 | Mini shopping toast card resizes correctly      | Works correctly        | Pass |
-| All toast messages resize to fit the devices    | Works correctly        |      |
+| All toast messages resize to fit the devices    | Works correctly        | Pass |
 
 # BUGS
   1. The only bugs i could find was on the checkout page, where text and the quantity input bars would not resize correctly 
   2. Javascript appearing in the source code even though i put them in separate js files. I have tried to fix as i wanted clean code through out my site.
   3. Toast javascript appearing on the base.html page I tired to put them in separate js file but was unable to get it to work.
   4. I know this isn`t technically a bug but due to the lack of automated testing on the LMS i was unable to put more test in this annoying as was trying to achieve a hire grade than a pass. 
+  5. Testing on html validation for the checkout page throws up errors this due to Django crispy forms being implement in to framework. 
 
 # Accessibility
 

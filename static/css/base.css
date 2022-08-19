@@ -381,9 +381,15 @@ p {
 .allauth-form-inner-content a {
     color: #37168A;
 }
-  h2{
+.h2, h2 {
+    font-size: 1.5rem;
+    color: white;
+}
+h3{
     color: #37168A;
-  }
+    margin-top: 2%;
+}
+
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
