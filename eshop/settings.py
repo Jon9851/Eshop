@@ -190,6 +190,8 @@ if 'USE_AWS' in os.environ:
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'eshopms4'
     AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and media files
@@ -207,6 +209,9 @@ if 'USE_AWS' in os.environ:
 FREE_DELIVERY_THRESHOLD = 200
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51LTOUGLHWTaJalw5OJWX2PmbArQvcbdSL9Fu0akEuB98jF23ZlHE30EPobzXc3WBldyo26PBhpxZNzG8g0SzMM5V00ZsUVEHSE')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51LTOUGLHWTaJalw5HzwhBXEcn9tdMK8jcc6iKuw9FtFbdsgkzyOPBIIvhZc0MCh9SStEmqVifFjGWh7ChUZipIAG00GLZUqG0M')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'eshop@example.com'
 
 
