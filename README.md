@@ -44,6 +44,7 @@ Welcome to Eshop an online e-commerce store which server as your one stop shop f
  The target audience for this site are, people that tired of these big online stores, trying to sell you stuff you don’t want or stock they can’t sell. Eshop has the best products available to buy at best prices for people that don’t want to spend loads of money but still want the best tech on the market today. 
 
  Eshop was designed with security in mind. From the secure checkout, and to pages that have restricted access for the users to keep their information safe, such as the wish list and user profile including delivery information and a complete order history available so why not shop today. Below i have included statistics to justify my reasoning for picking an ecommerce store as my final project.
+ 
 
  <!-- Online Shopping vs In-Store Shopping in 2022-https://fashiondiscounts.uk/statistics-on-online-shopping-vs-in-store-shopping/ -->
 * [Online Shopping vs In-Store Shopping](https://fashiondiscounts.uk/statistics-on-online-shopping-vs-in-store-shopping/)
