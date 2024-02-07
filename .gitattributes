@@ -1,5 +1,0 @@
-* linguist-vendored
-*.html linguist-dectectable=flase
-*.css linguist-detectable=flase
-*.java linguist-detectable=true
-*.python linguist-detectable=true
