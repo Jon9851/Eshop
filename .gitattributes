@@ -1,0 +1,9 @@
+$ cat .gitattributes
+public/* linguist-generated
+scot-ui/public/* linguist-generated
+
+$ github-linguist
+49.4%  HTML
+3.9%  JavaScript
+37.8%   python
+6.4%   CSS
