@@ -1,2 +1,5 @@
 * linguist-vendored
 *.html linguist-dectectable=flase
+*.python linguist-detectable=true
+*.django linguist-detectable=true
+*.js linguist-detectable=true
