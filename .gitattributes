@@ -1,0 +1,4 @@
+* linguist-vendored
+*.css linguist-detectable=flase
+*.javascript linguist-detectable=true
+*.python linguist-detectable=true
